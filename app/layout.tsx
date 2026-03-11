@@ -1,17 +1,21 @@
+import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata = {
-  title: "JTBD 3: Light and Dark modes",
-  description: "Prototype deployed via VibeSharing",
+export const metadata: Metadata = {
+  title: "Connected Compliance — Diligent Prototype",
+  description: "Connected Compliance prototype for compliance signal detection and task completion workflow",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
-      <head>
-        <script src="https://vibesharing.app/vs-sdk.js" defer></script>
-      </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+      </body>
     </html>
   );
 }
