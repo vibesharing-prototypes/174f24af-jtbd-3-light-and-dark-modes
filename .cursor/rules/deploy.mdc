@@ -1,0 +1,26 @@
+---
+description: "How to deploy this prototype"
+alwaysApply: true
+---
+
+# Deployment
+
+This prototype is hosted on VibeSharing with a GitHub-to-Vercel pipeline.
+
+## How to deploy
+
+\`\`\`bash
+git add .
+git commit -m "Describe what changed"
+git push origin main
+\`\`\`
+
+That's it. Vercel auto-deploys from this repo on every push to main.
+
+## Rules
+
+- Do NOT run vercel, vercel --yes, or vercel deploy
+- Do NOT zip files or use any deploy API
+- Do NOT create new Vercel projects
+- Do NOT use curl to call vibesharing.app/api endpoints
+- ONLY deploy by pushing to this git repo
